@@ -1,17 +1,23 @@
 #include <iostream>
-#include <Game.h>
+   #include <Game.h>
+#include <HumanAComputer.h>
+#include <HumanAHuman.h>
+#include <ComputerAcomputer.h>
  using namespace std;
 int main()
 {
 
 Game Tictactoe;
+HumanAComputer computer;
+HumanAHuman human;
+ComputerAcomputer machine;
 char ans = Tictactoe.whoFirst(); /// we store in ans where you choose
  if(ans=='H'){
-    Tictactoe.humanHuman();   /// we start game for human against human
+    human.humanHuman();   /// we start game for human against human
  }else if(ans=='M'){
-Tictactoe.humanMachine();
+  computer.humanMachine();
  }else if(ans=='I'){
-     Tictactoe.machineMachine(); /// we start game human against machine
+     machine.machineMachine(); /// we start game human against machine
  }else if(ans=='Q'){
   cout<< " You need to choose something valid" <<endl;
   exit(0);
@@ -19,6 +25,3 @@ Tictactoe.humanMachine();
 
 return 0;
 }
-
-
-
